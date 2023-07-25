@@ -1,14 +1,153 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="$CONTROLLER_NAME$"
-            prefHeight="400.0" prefWidth="600.0" >
+<BorderPane fx:id="login" prefHeight="769.0" prefWidth="1212.0" style="-fx-background-color: #EEE;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ticketmania.TicketManiaController">
+    <top>
+        <VBox alignment="TOP_CENTER" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+            <children>
+                <ImageView fitHeight="123.0" fitWidth="631.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../assets/png/ticketmania.png" />
+                    </image>
+                    <VBox.margin>
+                        <Insets top="21.0" />
+                    </VBox.margin>
+                </ImageView>
+            </children>
+        </VBox>
+    </top>
+    <padding>
+        <Insets left="12.0" right="12.0" top="8.0" />
+    </padding>
+    <center>
+        <VBox alignment="CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="464.0" prefWidth="399.0" style="-fx-background-color: white; -fx-border-radius: 20; -fx-background-radius: 10;" BorderPane.alignment="CENTER">
 
-</AnchorPane>
+
+            <padding>
+                <Insets bottom="20.0" top="25.0" />
+            </padding>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+            <children>
+                <Label contentDisplay="CENTER" prefHeight="32.0" prefWidth="300.0" text="Inicio de Sesión">
+                    <font>
+                        <Font name="MADETOMMY-Bold" size="25.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="12.0" />
+                    </VBox.margin>
+                </Label>
+                <HBox alignment="TOP_CENTER" prefHeight="51.0" prefWidth="287.0">
+                    <children>
+                        <ImageView fitHeight="20.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../assets/icons/information.png" />
+                            </image>
+                            <HBox.margin>
+                                <Insets right="10.0" top="8.0" />
+                            </HBox.margin>
+                        </ImageView>
+                        <Label prefHeight="51.0" prefWidth="278.0" text="Este software es exclusivo para personal autorizado de Ticketmania." wrapText="true">
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin>
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Label>
+                    </children>
+                    <VBox.margin>
+                        <Insets bottom="22.0" />
+                    </VBox.margin>
+                </HBox>
+                <Label prefHeight="25.0" prefWidth="292.0" text="Usuario">
+                    <VBox.margin>
+                        <Insets bottom="4.0" />
+                    </VBox.margin>
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="user" prefColumnCount="16" prefHeight="40.0" prefWidth="290.0" promptText="Ingresa tu Usuario" style="-fx-border-color: #666; -fx-border-width: 1.5; -fx-background-color: transparent; -fx-border-radius: 2;">
+                    <VBox.margin>
+                        <Insets bottom="14.0" />
+                    </VBox.margin>
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                </TextField>
+                <Label prefHeight="25.0" prefWidth="292.0" text="Contraseña">
+                    <VBox.margin>
+                        <Insets bottom="4.0" />
+                    </VBox.margin>
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Label>
+                <PasswordField fx:id="pass" prefColumnCount="16" prefHeight="40.0" prefWidth="291.0" promptText="Ingresa tu Contraseña" style="-fx-border-color: #666; -fx-border-width: 1.5; -fx-background-color: transparent; -fx-border-radius: 2;">
+                    <VBox.margin>
+                        <Insets bottom="12.0" />
+                    </VBox.margin>
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </PasswordField>
+                <CheckBox graphicTextGap="3.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="17.0" prefWidth="291.0" selected="true" style="-fx-border-radius: 15; -fx-background-radius: 15;" text="Mostrar Contraseña" textOverrun="CLIP" underline="true">
+                    <VBox.margin>
+                        <Insets bottom="21.0" />
+                    </VBox.margin>
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                    <opaqueInsets>
+                        <Insets right="-1.0" top="1.0" />
+                    </opaqueInsets>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </CheckBox>
+                <Button fx:id="submit" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleSubmit" prefHeight="37.0" prefWidth="288.0" style="-fx-border-radius: 50; -fx-background-radius: 50; -fx-background-color: #0a66c2;" text="Ingresar" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </Button>
+            </children>
+            <effect>
+                <DropShadow>
+                    <color>
+                        <Color opacity="0.06106869876384735" />
+                    </color>
+                </DropShadow>
+            </effect>
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+        </VBox>
+    </center>
+</BorderPane>
+
