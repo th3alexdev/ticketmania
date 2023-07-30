@@ -1,66 +1,46 @@
 package com.example.ticketmania;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.control.TextField;
-import javafx.scene.control.PasswordField;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.HBox;
-import javafx.scene.control.CheckBox;
+import javafx.scene.control.Label;
 
-import java.net.URL;
-import java.util.ResourceBundle;
+public class ConcertViewController {
 
-public class LoginController {
-    @FXML
-    private Parent root;
-    private BorderPane login;
-    private CheckBox showPass;
-    private TextField user;
-    private PasswordField passHidden;
-    private TextField passText;
-    private ImageView brand;
-    private HBox errorMessage;
-
-    /* -- */
-    @FXML
-    private void handleSubmit(ActionEvent event) {
-        String username = user.getText();
-        String password = showPass.isSelected() ? passText.getText() : passHidden.getText();
-
-        if (isValidUser(username, password)) {
-            System.out.println("Inicio de sesión exitoso");
-        } else {
-            errorMessage.setVisible(true);
-            user.clear();
-            passText.clear();
-            passHidden.clear();
-        }
-    }
-
-    private boolean isValidUser(String username, String password) {
-        return username.equals("user") && password.equals("pass");
-    }
+    private Concert selectedConcert;
 
     @FXML
-    public void togglePasswordVisibility(ActionEvent event) {
-        String password = passHidden.getText();
+    private ImageView posterView;
 
-        if (showPass.isSelected()) {
-            passText.setText(password);
-            passText.setVisible(true);
-            passHidden.setVisible(false);
-        } else {
-            passHidden.setText(password);
-            passHidden.setVisible(true);
-            passText.setVisible(false);
-        }
-    }
+    @FXML
+    private Label artistView;
 
-    public void initialize(URL location, ResourceBundle resources) {
-        this.togglePasswordVisibility(null);
+    @FXML
+    private Label nameView;
+
+    @FXML
+    private Label timeView;
+
+    @FXML
+    private Label fullDateView;
+
+    @FXML
+    private Label priceView;
+
+    @FXML
+    private Label locationView;
+
+    public void setConcert(Concert concert) {
+        selectedConcert = concert;
+
+        artistView.setText(selectedConcert.getArtistName());
+        nameView.setText(selectedConcert.getConcertName());
+        timeView.setText(selectedConcert.getTime());
+        fullDateView.setText(selectedConcert.getFullDate());
+        priceView.setText(String.valueOf(selectedConcert.getPrice()));
+        locationView.setText(selectedConcert.getLocation());
+
+        System.out.println("Detalles del concierto seleccionado desde CONCERT VIEW:");
+        System.out.println(selectedConcert.showConcert());
     }
 }
