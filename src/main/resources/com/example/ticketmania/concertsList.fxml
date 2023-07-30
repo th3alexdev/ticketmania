@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<GridPane alignment="CENTER" prefHeight="509.0" prefWidth="679.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ticketmania.ConcertsController">
+<GridPane alignment="CENTER" prefHeight="509.0" prefWidth="679.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ticketmania.ConcertsListController">
     <columnConstraints>
         <ColumnConstraints hgrow="SOMETIMES" maxWidth="324.0" minWidth="10.0" prefWidth="309.0" />
         <ColumnConstraints hgrow="SOMETIMES" maxWidth="307.0" minWidth="10.0" prefWidth="307.0" />
@@ -24,11 +24,16 @@
         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
     </rowConstraints>
     <children>
-        <Button alignment="CENTER" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#guardarImagen2" prefHeight="120.0" prefWidth="208.0" text="Reik" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+        <ImageView fitHeight="62.0" fitWidth="200.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.valignment="TOP">
+            <image>
+                <Image url="@../assets/png/ticketmania.png" />
+            </image>
+        </ImageView>
+        <Button fx:id="buttonConcert5" alignment="CENTER" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#setConcert" prefHeight="120.0" prefWidth="208.0" text="Reik" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
             <graphic>
                 <ImageView fitHeight="94.0" fitWidth="136.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../../../imagenes/reik.jpg" />
+                        <Image url="@../assets/events/reik.jpg" />
                     </image>
                 </ImageView>
             </graphic>
@@ -36,11 +41,11 @@
                 <Insets top="35.0" />
             </GridPane.margin>
         </Button>
-        <Button alignment="CENTER" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#guardarImagen6" text="Los miserables" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+        <Button fx:id="buttonConcert2" alignment="CENTER" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#setConcert" text="Los miserables" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2">
             <graphic>
                 <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../../../imagenes/los_miserables.png" />
+                        <Image url="@../assets/events/los_miserables.png" />
                     </image>
                 </ImageView>
             </graphic>
@@ -48,11 +53,11 @@
                 <Insets top="35.0" />
             </GridPane.margin>
         </Button>
-        <Button alignment="CENTER" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#guardarImagen5" prefHeight="128.0" prefWidth="209.0" text="Wisin y Yandel" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+        <Button fx:id="buttonConcert1" alignment="CENTER" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#setConcert" prefHeight="128.0" prefWidth="209.0" text="Wisin y Yandel" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
             <graphic>
                 <ImageView fitHeight="106.0" fitWidth="129.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../../../imagenes/Wisin y Yandel_3.jpg" />
+                        <Image url="@../assets/events/Wisin%20y%20Yandel_3.jpg" />
                     </image>
                 </ImageView>
             </graphic>
@@ -60,11 +65,11 @@
                 <Insets top="35.0" />
             </GridPane.margin>
         </Button>
-        <Button alignment="CENTER" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#guardarImagen3" prefHeight="121.0" prefWidth="212.0" text="Soda stereo" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+        <Button fx:id="buttonConcert3" alignment="CENTER" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#setConcert" prefHeight="121.0" prefWidth="212.0" text="Soda stereo" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
             <graphic>
                 <ImageView fitHeight="92.0" fitWidth="109.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../../../imagenes/Soda Stereo.jpg" />
+                        <Image url="@../assets/events/Soda%20Stereo.jpg" />
                     </image>
                 </ImageView>
             </graphic>
@@ -72,16 +77,11 @@
                 <Insets top="35.0" />
             </GridPane.margin>
         </Button>
-        <ImageView fitHeight="62.0" fitWidth="200.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.valignment="TOP">
-            <image>
-                <Image url="@../../../imagenes/ticketmania.png" />
-            </image>
-        </ImageView>
-        <Button alignment="CENTER" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#guardarImagen1" prefHeight="120.0" prefWidth="206.0" text="marc Antony" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+        <Button fx:id="buttonConcert4" alignment="CENTER" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#setConcert" prefHeight="120.0" prefWidth="206.0" text="marc Antony" GridPane.halignment="CENTER" GridPane.rowIndex="1">
             <graphic>
                 <ImageView fitHeight="102.0" fitWidth="161.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../../../imagenes/Mark Anthony.jpg" />
+                        <Image url="@../assets/events/Mark%20Anthony.jpg" />
                     </image>
                 </ImageView>
             </graphic>
@@ -89,11 +89,11 @@
                 <Insets top="35.0" />
             </GridPane.margin>
         </Button>
-        <Button alignment="TOP_CENTER" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#guardarImagen4" prefHeight="140.0" prefWidth="232.0" text="Pablo Alboran" GridPane.rowIndex="2">
+        <Button fx:id="buttonConcert6" alignment="TOP_CENTER" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#setConcert" prefHeight="140.0" prefWidth="232.0" text="Pablo Alboran" GridPane.rowIndex="2">
             <graphic>
                 <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../../../imagenes/Pablo Alboran.jpg" />
+                        <Image url="@../assets/events/Pablo%20Alboran.jpg" />
                     </image>
                 </ImageView>
             </graphic>
@@ -101,7 +101,7 @@
                 <Insets top="35.0" />
             </GridPane.margin>
         </Button>
-        <Button alignment="CENTER" mnemonicParsing="false" onAction="#cambiarEscena" prefHeight="31.0" prefWidth="131.0" text="continuar" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="TOP">
+        <Button alignment="CENTER" mnemonicParsing="false" onAction="#moveNextPage" prefHeight="31.0" prefWidth="131.0" text="continuar" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="TOP">
             <font>
                 <Font size="19.0" />
             </font></Button>
