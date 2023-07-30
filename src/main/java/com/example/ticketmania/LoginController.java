@@ -9,26 +9,36 @@ import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.control.TextField;
 import javafx.scene.control.PasswordField;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.control.CheckBox;
 import javafx.stage.Stage;
-
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.scene.control.Button;
 
-public class TicketManiaController {
+public class LoginController {
     @FXML
     private Parent root;
-    private BorderPane login;
-    private CheckBox showPass;
-    private TextField user;
-    private PasswordField passHidden;
-    private TextField passText;
-    private ImageView brand;
+    @FXML
     private HBox errorMessage;
+    @FXML
+    private TextField passText;
+    @FXML
+    private PasswordField passHidden;
+    @FXML
+    private TextField user;
+    @FXML
+    private CheckBox showPass;
+    @FXML
+    private BorderPane login;
+    @FXML
+    private Stage stage;
+    @FXML
+    private Scene scene;
 
-
+    @FXML
+    private Button submit;
 
     /* -- */
 
@@ -39,6 +49,7 @@ public class TicketManiaController {
 
         if (isValidUser(username, password)) {
             System.out.println("Inicio de sesión exitoso");
+            login(event);
         } else {
             errorMessage.setVisible(true);
             user.clear();
@@ -66,13 +77,25 @@ public class TicketManiaController {
         }
     }
 
-    public void initialize(URL location, ResourceBundle resources) {
+   public void initialize(URL location, ResourceBundle resources) {
         this.togglePasswordVisibility(null);
-    }
+   }
 
-    public void cambiarEscena(ActionEvent event) {
-        scene = new Scene(root, width, heigth);
-        stage.setScene(scene);
-        stage.show();
-    }
+   public void login(ActionEvent event) {
+       try {
+           FXMLLoader loader = new FXMLLoader(getClass().getResource("concertsList.fxml"));
+           root = loader.load();
+
+           stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+           Scene currentScene = stage.getScene();
+           double width = currentScene.getWidth();
+           double heigth = currentScene.getHeight();
+
+           scene = new Scene(root, width, heigth);
+           stage.setScene(scene);
+           stage.show();
+       } catch (NullPointerException | IOException e) {
+           System.out.println(e);
+       }
+   }
 }
