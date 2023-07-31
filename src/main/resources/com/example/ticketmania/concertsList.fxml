@@ -33,7 +33,7 @@
             <graphic>
                 <ImageView fitHeight="94.0" fitWidth="136.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../assets/events/reik.jpg" />
+                        <Image url="@../assets/events/reik.png" />
                     </image>
                 </ImageView>
             </graphic>
@@ -41,11 +41,11 @@
                 <Insets top="35.0" />
             </GridPane.margin>
         </Button>
-        <Button fx:id="buttonConcert2" alignment="CENTER" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#setConcert" text="Los miserables" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+        <Button fx:id="buttonConcert2" alignment="CENTER" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#setConcert" text="Los Mesoneros" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2">
             <graphic>
-                <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fitHeight="172.0" fitWidth="202.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../assets/events/los_miserables.png" />
+                        <Image url="@../assets/events/los_mesoneros.png" />
                     </image>
                 </ImageView>
             </graphic>
@@ -57,7 +57,7 @@
             <graphic>
                 <ImageView fitHeight="106.0" fitWidth="129.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../assets/events/Wisin%20y%20Yandel_3.jpg" />
+                        <Image url="@../assets/events/wisin_y_yandel.png" />
                     </image>
                 </ImageView>
             </graphic>
@@ -69,7 +69,7 @@
             <graphic>
                 <ImageView fitHeight="92.0" fitWidth="109.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../assets/events/Soda%20Stereo.jpg" />
+                        <Image url="@../assets/events/soda_stereo.png" />
                     </image>
                 </ImageView>
             </graphic>
@@ -81,7 +81,7 @@
             <graphic>
                 <ImageView fitHeight="102.0" fitWidth="161.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../assets/events/Mark%20Anthony.jpg" />
+                        <Image url="@../assets/events/mark_anthony.png" />
                     </image>
                 </ImageView>
             </graphic>
@@ -93,7 +93,7 @@
             <graphic>
                 <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../assets/events/Pablo%20Alboran.jpg" />
+                        <Image url="@../assets/events/pablo_alboran.png" />
                     </image>
                 </ImageView>
             </graphic>
