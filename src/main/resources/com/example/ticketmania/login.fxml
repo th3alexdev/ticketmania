@@ -109,7 +109,7 @@
                         <Insets />
                      </StackPane.margin>
                       </PasswordField>
-                  <TextField fx:id="passText" prefColumnCount="16" prefHeight="40.0" prefWidth="290.0" promptText="Ingresa tu Usuario" style="-fx-border-color: #666; -fx-border-width: 1.5; -fx-background-color: transparent; -fx-border-radius: 2;" visible="false">
+                  <TextField fx:id="passText" prefColumnCount="16" prefHeight="40.0" prefWidth="290.0" promptText="Ingresa tu Contraseña" style="-fx-border-color: #666; -fx-border-width: 1.5; -fx-background-color: transparent; -fx-border-radius: 2;" visible="false">
                      <font>
                         <Font size="14.0" />
                      </font>
